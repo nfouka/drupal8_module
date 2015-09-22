@@ -1,0 +1,14 @@
+
+
+<?php
+
+  function mymodules_theme() {
+    $theme['hello_page'] = [
+      'variables' => ['name' => NULL , 'all' => NULL ],
+      'template' => 'hello'
+    ];
+
+    return $theme;
+  }
+
+  ?>

@@ -1,0 +1,23 @@
+mymodules.default_controller_hello:
+  path: 'mymodules/hello/{name}'
+  defaults:
+    _controller: '\Drupal\mymodules\Controller\DefaultController::hello'
+    _title: 'My MOdyle de test'
+  requirements:
+    _permission: 'access content'
+
+mymodules.default_controller_hello_nadir:
+  path: 'mymodules/salut'
+  defaults:
+    _controller: '\Drupal\mymodules\Controller\DefaultController::salut'
+    _title: 'mymodules Title'
+  requirements:
+    _permission: 'access content'
+
+mymodules.default_controller_hello_nadir_twig:
+  path: 'mymodules/twig/fouka/{name}'
+  defaults:
+    _controller: '\Drupal\mymodules\Controller\DefaultController::twig'
+    _title: 'Mmodules Title With Symfony 2'
+  requirements:
+    _permission: 'access content'
