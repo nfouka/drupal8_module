@@ -11,8 +11,6 @@ use Drupal\Core\Template\TwigEnvironment;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-include '/var/www/html/drupal-8.0.0-beta15/modules/mymodules/vendor/apache/log4php/src/main/php/Logger.php';
-
 class DefaultController extends ControllerBase implements ContainerInjectionInterface {
 	/**
 	 * @var TwigEnvironment
