@@ -1,7 +1,7 @@
 {
 	"require" : {
 		"easyrdf/easyrdf" : "^0.9.1",
-		"swiftmailer/swiftmailer": "@stable" , 
-                "apache/log4php": "2.3.0"
+		"swiftmailer/swiftmailer": "@stable" 
+                
 	}
 }
