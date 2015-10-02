@@ -4,7 +4,7 @@
 
   function mymodules_theme() {
     $theme['hello_page'] = [
-      'variables' => ['name' => NULL , 'all' => NULL ],
+      'variables' => ['name' => NULL , 'all' => NULL , 'form' => NULL ],
       'template' => 'hello'
     ];
 

@@ -72,29 +72,7 @@ class DefaultController extends ControllerBase implements ContainerInjectionInte
  
   public function twig($name) {
       
-      
-        \Logger::configure(array(
-            'rootLogger' => array(
-                'appenders' => array('default'),
-            ),
-            'appenders' => array(
-                'default' => array(
-                    'class' => 'LoggerAppenderFile',
-                    'layout' => array(
-                        'class' => 'LoggerLayoutSimple'
-                    ),
-                    'params' => array(
-                        'file' => '/var/www/html/drupal-8.0.0-beta15/modules/mymodules/logs/logger.log',
-                        'append' => true
-                    )
-                )
-            )
-        ));
-      
-       $logger  =  \Logger::getLogger('main') ; 
-       $logger->info("Simple message de test  AT ".  date("F j, Y, g:i a") ) ; 
-       $logger->error("Simple message de test  AT ".  date("F j, Y, g:i a") ) ; 
-       
+
        $all = array(
            
            'info'=> 'Ubuntu amd64 Linux for developer' , 
@@ -113,15 +91,17 @@ class DefaultController extends ControllerBase implements ContainerInjectionInte
         foreach ($result as $record) {
         
                
-                $logger->info($record->location." date : ".date("F j, Y, g:i a") ) ;
+                
             }
         }
        
- 
+    $form = \Drupal::formBuilder()->getForm('Drupal\mymodules\Form\ContributeForm');
+        
     return [
       '#theme' => 'hello_page',
       '#name' => $name,
       '#all'  => $result  , 
+      '#form' => $form , 
     ];
 
   }
