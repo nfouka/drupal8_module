@@ -1,0 +1,17 @@
+
+calculatrice.default_controller_index:
+  path: '/calculatrice/index/{param_1}/{param_2}'
+  defaults:
+    _controller: '\Drupal\calculatrice\Controller\DefaultController::index'
+    _title: 'Simple Calculate With JavaScript'
+  requirements:
+    _permission: 'access content'
+
+
+calculatrice.default_controller_index_mvc:
+  path: '/index/{param_1}/{param_2}'
+  defaults:
+    _controller: '\Drupal\calculatrice\Controller\DefaultController::indexAction'
+    _title: 'Simple Calculate With JavaScript MVC D8 '
+  requirements:
+    _permission: 'access content'

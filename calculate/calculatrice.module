@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains calculatrice.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function calculatrice_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the calculatrice module.
+    case 'help.page.calculatrice':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('calculatrice') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+
+function calculatrice_theme() {
+
+    $theme['index_page'] = [
+      'variables' => ['name' => NULL , 'param_1' => NULL  , 'param_2' => NULL  ],
+      'template'  => 'index'
+    ];
+
+    return $theme;
+  }
